@@ -1,0 +1,120 @@
+Git and GitHub
+
+How do I work with other developers on the same project?
+How we keep our project in sync with each other?
+How do we recover project files if we have issues in our code?
+How do I keep my project working in different environments?
+
+Version Control - a system of keeping track of changes to the code 
+- work with other developers on the same project
+- keep our project in sync with each other
+- recover project files if we have issues in our code
+- keep our project working in different environments - take this with a pinch of salt
+
+Windows
+filenames are lax - fileName === FILENAME === Filename
+
+Server.js
+
+Linux/macOS - UNIX Environments
+filenames are strict - fileName !== FILENAME !== Filename
+
+Git is a type of version control system(VCS). It is the most popular version control system. 
+
+Keeps track of changes to your code over a period of time. saves these changes to a database called a repository.
+
+Real World Example 1
+Amarachi is building an E-commerce website. E-commerce websites have a lot of moving parts. 
+Benison - payments, 
+Philemon - orders and product listing, 
+Timi - discounts, authentication, and shipping,
+Amarachi - admin end of CRUD products, CRUD for discounts, analytics etc.
+
+One month into the project - Amarachi's system crashed - pushed her code to GitHub.
+
+Git takes snapshots of the code at points in time. THIS IS NOT AUTOMATIC! 
+
+Types of Version Control Systems
+- Centralized Version
+- Distributed Version
+
+Centralized Version: all the code is stored on a central system
+If the server goes down...
+Examples of this system - subversion and Team Foundation Server
+
+Distributed Version: everyone has a copy of the code, and the code is syncronized with everyone and the updated version can be accessed by everyone.
+Examples of this system - git and mercurial
+
+
+Git is the most popular version control system. 
+Reasons why developers use git
+- it is free!
+- it is open source
+- it is super fast
+- it is scalable
+- it has cheap branching/merging systems 
+
+How do we use Git?
+- Terminal
+- Code editors and IDEs(Integrated Development Environment)
+- Graphical User Interfaces(GUI) - Sourcetree, Git Kraken, GitHub Desktop etc.
+
+Difference Between IDEs and Code Editors
+IDE - for you not to leave: terminal, database access, git, file browser, code editor etc.
+Code Editors - text editor, a few extensions... : terminal, git, file browser, database access, test runner, API documentation extension, etc. Vs Code becomes slower - takes a little more time to open, takes a little more time to carry out commands etc.
+
+GUIs are built with the most used commands - not all the commands 
+
+When using the terminal: command modifier/flag arguments options
+
+git --version: gives us the version of Git we are running on our machine
+
+Bash - Bourne Again Shell: Linux/UNIX shell emulator
+is to have a cross platform experience with git.
+
+Levels of Configuring Git
+- System Level - Git will apply the settings to every user on the machine
+- Global Level - Git applies this to repositories of the current user
+- Local Level - Git applies this to the repository the user is in
+
+git config --global help
+
+
+Configuration properties that can be set/updated
+- name of the user
+- email of the user 
+- default editor 
+- how Git should handle file endings - autocrlf -> carriage return line feed
+
+\n - UNIX
+\r\n - Windows
+
+\r => carriage return
+\n => line feed
+
+Set the name of the user
+git config --global user.name "John Doe"
+
+Set the email of the user
+git config --global user.email dojohn@github.com
+
+Set the default editor for git
+git config --global core.editor "code --wait"
+
+Set the line endings - windows
+git config --global core.autocrlf true
+
+Set the line endings - UNIX
+git config --global core.autocrlf input
+
+How does git work?
+Git creates what is know as a snapshot of the changes made and saves them to a repository.
+
+To setup a new git repository
+git init - this sets up an empty repository in the folder you are in.
+
+Files => Staging Area => Repository 
+
+- modifications are made to the file(s)
+- the modifications are added to the staging area
+- the staged modifications are stored as a record in the repository 
