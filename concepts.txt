@@ -118,3 +118,5 @@ Files => Staging Area => Repository
 - modifications are made to the file(s)
 - the modifications are added to the staging area
 - the staged modifications are stored as a record in the repository 
+
+Try to make your commit messages as detailed as possible
