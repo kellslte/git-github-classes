@@ -120,3 +120,66 @@ Files => Staging Area => Repository
 - the staged modifications are stored as a record in the repository 
 
 Try to make your commit messages as detailed as possible
+
+Branching - creating a copy of the code at the current state it is in 
+Creating a copy or different version of the code
+
+Real World Example 2
+Maitaru, Joshua and Raji are building a Bank App
+master - main - first track or branch or version - App version you will deploy to production(Clients will use)
+You will only want to add stable or finished versions of your code to the main branch. You would want app features that are working fine to be on the main branch.
+
+Tries to use Trees as a picture
+main - production(real life clients use this version)
+develop/dev - staging or testing(testers use this version)
+maitaru/auth - specific features or bugs
+josh/notifications - specific features or bugs
+raji/transfers - specific features or bugs
+
+This naming convention gives you the name of the user and the feature they are working on
+
+kellslte/db-transactions
+
+You would want the branch to tell the reader what it is for 
+
+When you are done working on a specific feature you want to close the branch you used.
+
+By default Git is local - on your machine
+
+Push - create a copy of your local code on a remote repository(database for the changes you have made to the code) 
+git push
+Before you push:
+you should have added the changes to the local repository using git add .
+you should also take a snapshot of the changes and store them in your local repository using git commit -m "your message here" 
+
+Pull - updates the local version to match the online/remote version
+Make sure you do not have any staged changes
+git pull
+
+git branch <name of the branch> - create the branch
+git checkout <name of the branch> -  switch to the new branch 
+
+git checkout -b <name of the branch> - create the branch and switch to it
+
+git branch - this will only give you the list of local branches
+
+Checkout - switches branches
+Merge - combines two branches
+Rebase!
+Fork - this is specifically a GitHub command!
+Fetch - this updates the metadata or background information of the local repo to match the online version
+
+GitHub - remote repository/online repository 
+You could want to
+- trigger actions on your code based on the changes you have made
+- run tests on the code to determine stability
+- deploy the application to manual staging or testing platform
+etc.
+
+GitHub enables you to share your code with others
+It also enables you to run actions on your code 
+It also enables you to deploy your code etc.
+
+username, email, password 
+
+Join Organizations, be part of a team, collaborate with others on projects.
